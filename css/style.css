@@ -79,6 +79,10 @@ button {
     background-color: lightgrey;
     padding: 10px;
 }
+.loader {
+    color: navy;
+    text-align: center;
+}
 /* Tablet */
 @media only screen and (min-width: 641px) {
 	main {

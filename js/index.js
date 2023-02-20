@@ -1,9 +1,9 @@
 const url = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
 const productsContainer = document.querySelector(".products");
-
-
+const loader = document.querySelector(".loader");
 async function getMakeup() {
     try {
+        loader.innerHTML = "";
         const response = await fetch(url);
         const results = await response.json();
         console.log(results);
@@ -14,11 +14,10 @@ async function getMakeup() {
                                             <p>${product.name}</p>
                                             </div>`
         });
+       
     } catch (error) {
         console.log(error);
         productsContainer.innerHTML = message("error", error);
     }
-   
-   
 }
-getMakeup();
+setTimeout(getMakeup,2000);
