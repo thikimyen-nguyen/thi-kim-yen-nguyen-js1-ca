@@ -1,6 +1,6 @@
+/* General styling */
 body {
 	font-family: Nunito;
-   
 }
 main {
 	padding: 5px;
@@ -27,36 +27,8 @@ nav li {
 .active {
 	text-decoration: underline;
 }
-form {
-    padding: 50px;
-    background-color: lightgrey;
-    margin: auto;
 
-}
-
-input {
-    padding: 7px;
-    font-size: 15px;
-    border-radius: 5px;
-    border-style: none;
-    width: 100%;
-    margin-bottom: 15px;
-}
-
-.error {
-    color: red;
-    font-size: 12px;
-    /* display: none; */
-}
-button {
-    background-color: navy;
-    font-weight: 600;
-    padding: 10px 50px;
-    margin-top: 20px;
-    border-style: none;
-    border-radius: 5px;
-    color: white;
-}
+/* Index page */
 .products {
     display: flex;
     flex-flow: row wrap;
@@ -78,11 +50,39 @@ button {
     color: red;
     background-color: lightgrey;
     padding: 10px;
+    font-size: 12px;
 }
 .loader {
     color: navy;
     text-align: center;
 }
+/* Contact page */
+form {
+    padding: 50px;
+    background-color: lightgrey;
+    margin: auto;
+}
+input {
+    padding: 7px;
+    font-size: 15px;
+    border-radius: 5px;
+    border-style: none;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: navy;
+    font-weight: 600;
+    padding: 10px 50px;
+    margin-top: 20px;
+    border-style: none;
+    border-radius: 5px;
+    color: white;
+}
+/* Details page */
+
+
 /* Tablet */
 @media only screen and (min-width: 641px) {
 	main {
@@ -96,9 +96,10 @@ button {
         font-size: 20px;
         margin-bottom: 20px;
     }
-    .error {
-       font-size: 13px;
+    .message_error {
+        font-size: 15px;
     }
+   
 }
 
 /* Desktop */
@@ -111,7 +112,7 @@ button {
 	main {
 		padding: 20px;
 	}
-	nav ul {
+	nav ul, .message_error {
 		font-size: 25px;
 	}
     form {
@@ -122,9 +123,7 @@ button {
         font-size: 25px;
         margin-bottom: 30px;
     }
-    .error {
-        font-size: 17px;
-     }
+    
 	button {
         font-size: 20px;
     }
