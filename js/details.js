@@ -1,6 +1,6 @@
 const productDetailContainer = document.querySelector(".product_detail");
 const loader = document.querySelector(".loader");
-
+const pageTitle = document.querySelector("title");
 
 const querryString = document.location.search;
 console.log(querryString);
@@ -18,6 +18,8 @@ async function getDetail() {
         const details = await response.json();
         console.log(details);
         createHtml(details);
+        console.log(pageTitle);
+        pageTitle.innerHTML = details.name;
     } catch (error) {
         console.log(error);
         productDetailContainer.innerHTML = message("error", error);
