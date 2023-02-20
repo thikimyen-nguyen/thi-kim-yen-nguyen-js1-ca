@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="contact page">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="contact.html" class="active">Contact</a></li>
+            </ul>
+        </nav>    
+    </header>
+    <main>
+        <h1>Contact Form</h1>
+        <form >
+            <label for="name">Name (required)
+                <span class="error">Please enter your name</span>
+                 <input type="text" name="name" id="name">
+            </label>
+            <label for="subject">Subject (minimum 10 characters)
+                <span class="error">Please enter subject</span>
+                    <input type="text" name="subject" id="subject">
+            </label>
+            <label for="email">Email
+                <span class="error">Please enter a valid email address</span>
+                    <input type="email" name="email" id="email">
+            </label>
+            <label for="address">Address (minimum 25 characters)
+                <span class="error">Please enter your address</span>
+                    <input type="text" name="address" id="address">
+            </label>
+            <!-- <div class="contact_form">
+                <label for="subject">Subject (minimum 10 characters)</label>
+                <div class="error">Please enter subject</div>
+                <input type="text" name="subject" id="subject">
+            </div>
+            <div class="contact_form">
+                <label for="email">Email</label>
+                <div class="error">Please enter a valid email address</div>
+                <input type="email" name="email" id="email">
+            </div>
+            <div class="contact_form">
+                <label for="address">Address (minimum 25 characters)</label>
+                <div class="error">Please enter your address</div>
+                <input type="text" name="address" id="address">
+            </div> -->
+            <button>Submit</button>
+        </form>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
