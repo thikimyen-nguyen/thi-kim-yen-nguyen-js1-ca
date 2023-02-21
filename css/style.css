@@ -16,13 +16,19 @@ nav ul {
 	gap: 50px;
 	font-size: 20px;
 	padding: 0px;
+    
 }
-a {
+nav a {
     text-decoration: none;
-    color: navy;
+    color: #22BA94;
+}
+.products a {
+    color: black;
+    text-decoration: none;
 }
 nav li {
 	list-style: none;
+   
 }
 .active {
 	text-decoration: underline;
@@ -46,12 +52,18 @@ nav li {
 .image {
     text-align: center;
 }
-.message_error {
-    color: red;
-    background-color: lightgrey;
+.error {
+    background-color: #EDEDED;
     padding: 10px;
+}
+.form_error, .error {
+    color: red;
     font-size: 12px;
 }
+.form_error {
+    display: none;
+}
+
 .loader {
     color: navy;
     text-align: center;
@@ -59,9 +71,10 @@ nav li {
 /* Contact page */
 form {
     padding: 50px;
-    background-color: lightgrey;
+    background-color: #EDEDED;
     margin: auto;
 }
+
 input {
     padding: 7px;
     font-size: 15px;
@@ -72,13 +85,13 @@ input {
 }
 
 button {
-    background-color: navy;
+    background-color: #22BA94;
     font-weight: 600;
     padding: 10px 50px;
     margin-top: 20px;
     border-style: none;
     border-radius: 5px;
-    color: white;
+    color: black;
 }
 /* Details page */
 
@@ -96,7 +109,7 @@ button {
         font-size: 20px;
         margin-bottom: 20px;
     }
-    .message_error {
+    .error, .form_error {
         font-size: 15px;
     }
    
@@ -112,7 +125,7 @@ button {
 	main {
 		padding: 20px;
 	}
-	nav ul, .message_error {
+	nav ul {
 		font-size: 25px;
 	}
     form {
@@ -124,7 +137,7 @@ button {
         margin-bottom: 30px;
     }
     
-	button {
+	button, .error, .form_error  {
         font-size: 20px;
     }
 }

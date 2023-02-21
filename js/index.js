@@ -13,7 +13,7 @@ async function getMakeup() {
         results.forEach(function(product) {
             productsContainer.innerHTML += `<a href="details.html?id=${product.id}" class="product_card">
                                             <div class="image"><img src="${product.api_featured_image}" alt="photo of ${product.name}"></div>
-                                            <h3>Price: $${product.price}</h3>
+                                            <h3>$${product.price}</h3>
                                             <p>${product.name}</p>
                                             </a>`
         });

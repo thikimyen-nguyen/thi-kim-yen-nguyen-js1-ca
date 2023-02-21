@@ -24,19 +24,19 @@
         <h1>Contact Form</h1>
         <form >
             <label for="name">Name (required)
-                <span class="error">Please enter your name</span>
+                <div class="form_error" id="nameError">Please enter your name</div>
                  <input type="text" name="name" id="name">
             </label>
             <label for="subject">Subject (minimum 10 characters)
-                <span class="error">Please enter subject</span>
+                <div class="form_error" id="subjectError">Subject must be at least 10 characters</div>
                     <input type="text" name="subject" id="subject">
             </label>
             <label for="email">Email
-                <span class="error">Please enter a valid email address</span>
+                <div class="form_error" id="emailError">Please enter a valid email address</div>
                     <input type="email" name="email" id="email">
             </label>
             <label for="address">Address (minimum 25 characters)
-                <span class="error">Please enter your address</span>
+                <div class="form_error" id="addressError">Address must be at least 25 characters</div>
                     <input type="text" name="address" id="address">
             </label>
             <!-- <div class="contact_form">
@@ -58,6 +58,6 @@
         </form>
     </main>
 
-    <script src="js/script.js"></script>
+    <script src="js/contact.js"></script>
 </body>
 </html>
