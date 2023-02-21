@@ -21,6 +21,7 @@ nav ul {
 nav a, .submit_success {
     text-decoration: none;
     color: #22BA94;
+    text-align: center;
 }
 .products a {
     color: black;
