@@ -54,7 +54,7 @@ function validateForm(event) {
     validateAddress(address);
 
     if (validateName(inputName) && validateSubject(subject) && validateEmail(email) && validateAddress(address)) {
-        form.reset();
+        // form.reset();
         submitFormSuccess.innerHTML += `<div>Your form was passed validation.</div>`;
     }
 }
@@ -62,36 +62,44 @@ function validateForm(event) {
 function validateName(inputName) {
     if (inputName.value.trim().length > 0) {
         nameError.style.display = "none";
+        return true;
     } else {
         nameError.style.display = "block";
+        return false;
     }
-    return true;
+    
 }
 function validateSubject(subject) {
     if (subject.value.trim().length > 9) {
         subjectError.style.display = "none";
+        return true;
     } else {
         subjectError.style.display = "block";
+        return false;
     }
-    return true;
+    
 }
 function validateEmail(email) {
     const regEx = /\S+@\S+\.\S+/;
     const patternMatches = regEx.test(email.value);
     if (patternMatches === true) {
         emailError.style.display = "none";
+        return true;
     } else {
         emailError.style.display = "block";
+        return false;
     }
-    return true;
+    
   }
 function validateAddress(address) {
     if (address.value.trim().length > 24) {
         addressError.style.display = "none";
+        return true;
     } else {
         addressError.style.display = "block";
+        return false;
     }
-    return true;
+   
 }
 
 form.addEventListener("submit", validateForm);
