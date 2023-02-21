@@ -2,7 +2,7 @@
 // API link is from https://mixedanalytics.com/blog/list-actually-free-open-no-auth-needed-apis/
 const apiUrl = "http://makeup-api.herokuapp.com/api/v1/products.json?brand=maybelline";
 const corsEnableUrl = "https://noroffcors.onrender.com/";
-const url = apiUrl + corsEnableUrl;
+const url = corsEnableUrl + apiUrl;
 const productsContainer = document.querySelector(".products");
 const loader = document.querySelector(".loader");
 
