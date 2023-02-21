@@ -18,7 +18,7 @@ nav ul {
 	padding: 0px;
     
 }
-nav a {
+nav a, .submit_success {
     text-decoration: none;
     color: #22BA94;
 }

@@ -7,6 +7,7 @@ const nameError =  document.querySelector("#nameError");
 const subjectError =  document.querySelector("#subjectError");
 const emailError =  document.querySelector("#emailError");
 const addressError =  document.querySelector("#addressError");
+const submitFormSuccess = document.querySelector(".submit_success");
 
 // function validateForm(event) {
 //     event.preventDefault();
@@ -51,7 +52,13 @@ function validateForm(event) {
     validateSubject(subject);
     validateEmail(email);
     validateAddress(address);
+
+    if (validateName(inputName) && validateSubject(subject) && validateEmail(email) && validateAddress(address)) {
+        form.reset();
+        submitFormSuccess.innerHTML += `<div>Your form was passed validation.</div>`;
+    }
 }
+
 function validateName(inputName) {
     if (inputName.value.trim().length > 0) {
         nameError.style.display = "none";
