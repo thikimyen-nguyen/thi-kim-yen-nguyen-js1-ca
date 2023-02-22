@@ -10,8 +10,10 @@ async function getMakeup() {
     try {
         loader.innerHTML = "";
         const response = await fetch(url);
-        const results = await response.json();
-        console.log(results);
+        const results = await response.json();        
+        if (typeof results !== "object") {
+            throw new Error('Error in fetching data');
+        };
         results.forEach(function(product) {
             productsContainer.innerHTML += `<a href="details.html?id=${product.id}" class="product_card">
                                             <div class="image"><img src="${product.api_featured_image}" alt="photo of ${product.name}"></div>
@@ -21,7 +23,6 @@ async function getMakeup() {
         });
        
     } catch (error) {
-        console.log(error);
         productsContainer.innerHTML = message("error", error);
     }
 }

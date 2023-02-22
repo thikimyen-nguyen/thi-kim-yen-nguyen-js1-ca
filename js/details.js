@@ -4,25 +4,19 @@ const pageTitle = document.querySelector("title");
 const corsEnableUrl = "https://noroffcors.onrender.com/";
 
 const querryString = document.location.search;
-console.log(querryString);
 const params = new URLSearchParams(querryString);
 const id = params.get("id");
-console.log(id);
 
 const url = corsEnableUrl + "http://makeup-api.herokuapp.com/api/v1/products/" + id + ".json";
-console.log(url);
 
 async function getDetail() {
     try {
         loader.innerHTML = "";
         const response = await fetch(url);
         const details = await response.json();
-        console.log(details);
         createHtml(details);
-        console.log(pageTitle);
         pageTitle.innerHTML = details.name;
     } catch (error) {
-        console.log(error);
         productDetailContainer.innerHTML = message("error", error);
     }
 }
