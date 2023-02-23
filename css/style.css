@@ -17,6 +17,9 @@ h1 {
 	padding: 30px;
     text-align: center;
 }
+h3, h4 {
+    font-family: var(--roboto);
+}
 nav ul {
 	display: flex;
 	justify-content: center;
