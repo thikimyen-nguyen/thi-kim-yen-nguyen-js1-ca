@@ -12,13 +12,13 @@ async function getMakeup() {
         const response = await fetch(url);
         const results = await response.json();        
         if (typeof results !== "object") {
-            throw new Error('Error in fetching data');
+            throw new Error("Error in fetching data");
         };
         results.forEach(function(product) {
             productsContainer.innerHTML += `<a href="details.html?id=${product.id}" class="product_card">
-                                            <div class="image"><img src="${product.api_featured_image}" alt="photo of ${product.name}"></div>
+                                            <div class="image"><img src="${product.api_featured_image}" alt="${product.name}"></div>
                                             <h3>$${product.price}</h3>
-                                            <p>${product.name}</p>
+                                            <h4>${product.name}</h4>
                                             </a>`
         });
        

@@ -1,12 +1,19 @@
 /* General styling */
+:root {
+    --light_grey:  #EDEDED;
+    --mint: #22BA94;
+    --red: red;
+    --nunito: 'Nunito', Arial, Verdana, Tahoma, Georgia, sans-serif;
+    --roboto: 'Roboto', Arial, Verdana, Tahoma, Georgia, sans-serif;
+}
 body {
-	font-family: Nunito;
+	font-family: var(--nunito);
 }
 main {
 	padding: 5px;
 }
 h1 {
-	font-family: Roboto;
+	font-family: var(--roboto);
 	padding: 30px;
     text-align: center;
 }
@@ -20,7 +27,7 @@ nav ul {
 }
 nav a, .submit_success {
     text-decoration: none;
-    color: #22BA94;
+    color: var(--mint);
     text-align: center;
 }
 .products a {
@@ -29,7 +36,6 @@ nav a, .submit_success {
 }
 nav li {
 	list-style: none;
-   
 }
 .active {
 	text-decoration: underline;
@@ -54,11 +60,11 @@ nav li {
     text-align: center;
 }
 .error {
-    background-color: #EDEDED;
+    background-color: var(--light_grey);
     padding: 10px;
 }
 .form_error, .error {
-    color: red;
+    color: var(--red);
     font-size: 12px;
 }
 .form_error {
@@ -66,13 +72,13 @@ nav li {
 }
 
 .loader {
-    color: navy;
+    color: var(--mint);
     text-align: center;
 }
 /* Contact page */
 form {
     padding: 50px;
-    background-color: #EDEDED;
+    background-color: var(--light_grey);
     margin: auto;
 }
 
@@ -86,7 +92,7 @@ input {
 }
 
 button {
-    background-color: #22BA94;
+    background-color: var(--mint);
     font-weight: 600;
     padding: 10px 50px;
     margin-top: 20px;
